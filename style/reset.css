@@ -7,4 +7,9 @@
     scroll-behavior: smooth;
     text-decoration: none;
     list-style: none;
+    fill: var(--text-color);
+  }
+
+  svg{
+    fill: var(--text-color);
   }
