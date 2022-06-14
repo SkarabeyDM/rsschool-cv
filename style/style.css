@@ -1,0 +1,85 @@
+:root {
+    --text-color: #eeeeee;
+    --text-bg: #888;
+    --bg-color: #0d0d0d;
+    --select-color: #ff6201;
+    --select-color-filter: invert(51%) sepia(35%) saturate(7330%) hue-rotate(0deg) brightness(102%) contrast(106%);
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: var(--bg-color);
+}
+
+
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+    min-height: 50px;
+}
+
+a:hover{
+    filter: var(--select-color-filter)
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.avatar {
+    width: 300px;
+}
+
+.avatar img {
+    margin: 15px;
+    width: 270px;
+    border-radius: 50%;
+}
+
+.name{
+    vertical-align: middle;
+    text-align: center;
+}
+
+.name>h1 {
+    text-transform: uppercase;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+
+nav {
+    padding: 15px;
+    position: relative;
+    border-bottom: 2px solid var(--text-bg);
+}
+
+nav ul {
+    display: flex;
+    text-decoration: initial;
+    justify-content: space-between;
+}
+
+.nav-item {
+    margin: 0px 10px;
+}
+
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.github > *{
+    vertical-align: middle;
+}
