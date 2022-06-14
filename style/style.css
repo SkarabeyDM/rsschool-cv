@@ -1,12 +1,63 @@
-:root{
+:root {
     --text-color: rgb(220, 220, 220);
     --bg-color: #0d0d0d
 }
 
-body{
+body {
     background-color: var(--bg-color);
 }
 
-.avatar img{
+.two-columns {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    margin: auto;
+}
+
+header {
+    display: flex;
+}
+
+.header_container {
+    width: 70%;
+}
+
+.avatar {
+    width: 30%;
+}
+
+.avatar img {
+    margin: 15px;
+    width: 256px;
     border-radius: 50%;
+}
+
+.name {
+    position: relative;
+    margin: 4em 0;
+    text-align: center;
+}
+
+.name>h1 {
+    position: relative;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+
+nav {
+    padding: 15px;
+    position: relative;
+    border-bottom: 1px solid var(--text-color);
+}
+
+nav ul {
+    display: flex;
+    text-decoration: initial;
+    justify-content: flex-end;
+}
+
+.nav-item {
+    margin: 0px 10px;
 }
