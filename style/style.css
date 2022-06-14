@@ -73,6 +73,11 @@ nav ul {
 }
 
 
+footer{
+    padding: 20px;
+    background-color: #cd4b00;
+}
+
 .footer-container{
     display: flex;
     justify-content: space-between;
@@ -82,4 +87,12 @@ nav ul {
 
 .github > *{
     vertical-align: middle;
+}
+
+.footer-year{
+    width: 100px;
+    text-align: center;
+    font-size: 37px;
+    line-height: 37px;
+    font-weight: bold;
 }
