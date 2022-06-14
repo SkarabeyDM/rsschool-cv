@@ -1,8 +1,9 @@
 :root {
-    --text-color: #dcdcdc;
+    --text-color: #eeeeee;
     --text-bg: #888;
     --bg-color: #0d0d0d;
     --select-color: #ff6201;
+    --select-color-filter: invert(51%) sepia(35%) saturate(7330%) hue-rotate(0deg) brightness(102%) contrast(106%);
 }
 
 body {
@@ -15,14 +16,17 @@ body {
     background-color: var(--bg-color);
 }
 
+
+
 .container{
     max-width: 1440px;
     margin: 0 auto;
+    padding: 0 20px;
     min-height: 50px;
 }
 
 a:hover{
-    filter: invert(51%) sepia(35%) saturate(7330%) hue-rotate(0deg) brightness(102%) contrast(106%);
+    filter: var(--select-color-filter)
 }
 
 header {
@@ -40,14 +44,13 @@ header {
     border-radius: 50%;
 }
 
-.name > *{
+.name{
     vertical-align: middle;
-    align-self: start;
     text-align: center;
 }
 
 .name>h1 {
-    position: relative;
+    text-transform: uppercase;
     font-size: 60px;
     margin-bottom: 10px;
 }
@@ -56,7 +59,7 @@ header {
 nav {
     padding: 15px;
     position: relative;
-    border-bottom: 1px solid var(--text-bg);
+    border-bottom: 2px solid var(--text-bg);
 }
 
 nav ul {
@@ -75,7 +78,6 @@ nav ul {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    color: #fff;
 }
 
 .github > *{
