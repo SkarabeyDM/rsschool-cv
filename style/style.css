@@ -3,13 +3,15 @@
     --text-bg: #888;
     --bg-color: #0d0d0d;
     --select-color: #ff6201;
+    --shadow-color: #702200;
     --select-color-filter: invert(51%) sepia(35%) saturate(7330%) hue-rotate(0deg) brightness(102%) contrast(106%);
 }
 
 body {
-    position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
     margin: auto;
     font-size: 18px;
     font-weight: 400;
@@ -18,20 +20,19 @@ body {
 
 
 
-.container{
+.container {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 20px;
     min-height: 50px;
 }
 
-a:hover{
+main a:hover {
     filter: var(--select-color-filter)
 }
 
-header {
+header .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .avatar {
@@ -42,9 +43,10 @@ header {
     margin: 15px;
     width: 270px;
     border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 30px, rgba(0, 0, 0, 0.5) 0px 3px 15px;
 }
 
-.name{
+.name {
     vertical-align: middle;
     text-align: center;
 }
@@ -57,9 +59,21 @@ header {
 
 
 nav {
+    font-size: 20px;
     padding: 15px;
     position: relative;
-    border-bottom: 2px solid var(--text-bg);
+}
+
+.bg {
+    background-color: #ff6201;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    height: 5em;
+    z-index: -1;
 }
 
 nav ul {
@@ -72,24 +86,66 @@ nav ul {
     margin: 0px 10px;
 }
 
-
-footer{
-    padding: 20px;
-    background-color: #cd4b00;
+main {
+    margin-bottom: auto;
+    background-color: var(--bg-color);
 }
 
-.footer-container{
+.section {
+    width: calc(50% - 20px);
+    padding: 15px;
+}
+
+.section-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+pre {
+    display: block;
+    white-space: pre;
+}
+
+code{
+    font-family: 'Andale Mono', monospace;
+}
+
+.eng-lvl div{
+    font-size: 60px;
+}
+
+footer {
+    padding: 20px;
+    background-color: #ff6201;
+}
+
+footer a:hover {
+    animation: shadow .5s ease-in-out;
+}
+
+@keyframes shadow {
+    from {
+        filter: inherit;
+    }
+
+    to {
+        filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .7));
+    }
+}
+
+.footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
 }
 
-.github > *{
+.github>* {
     vertical-align: middle;
 }
 
-.footer-year{
+.footer-year {
     width: 100px;
     text-align: center;
     font-size: 37px;
