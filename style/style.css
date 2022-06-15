@@ -1,7 +1,7 @@
 :root {
     --text-color: #eeeeee;
     --text-bg: #888;
-    --bg-color: #0d0d0d;
+    --bg-color: #202020;
     --select-color: #ff6201;
     --shadow-color: #702200;
     --select-color-filter: invert(51%) sepia(35%) saturate(7330%) hue-rotate(0deg) brightness(102%) contrast(106%);
@@ -26,8 +26,16 @@ body {
     min-height: 50px;
 }
 
+a{
+    transition: .3s;
+}
+
 main a:hover {
     filter: var(--select-color-filter)
+}
+
+header{
+    margin-bottom: 20px;
 }
 
 header .container {
@@ -78,8 +86,6 @@ nav {
 
 nav ul {
     display: flex;
-    text-decoration: initial;
-    justify-content: space-between;
 }
 
 .nav-item {
@@ -107,11 +113,11 @@ pre {
     white-space: pre;
 }
 
-code{
+code {
     font-family: 'Andale Mono', monospace;
 }
 
-.eng-lvl div{
+.eng-lvl div {
     font-size: 60px;
 }
 
@@ -120,18 +126,8 @@ footer {
     background-color: #ff6201;
 }
 
-footer a:hover {
-    animation: shadow .5s ease-in-out;
-}
-
-@keyframes shadow {
-    from {
-        filter: inherit;
-    }
-
-    to {
-        filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .7));
-    }
+a:hover {
+    filter: drop-shadow(0 5px 4px black) drop-shadow(0 5px 1px rgba(0, 0, 0, 0.5));
 }
 
 .footer-container {
